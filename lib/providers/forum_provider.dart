@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pawpaw/models/forum_post.dart';
+import 'package:pet_connect/models/forum_post.dart';
 import 'package:uuid/uuid.dart';
 
 class ForumNotifier extends StateNotifier<List<ForumPost>> {
