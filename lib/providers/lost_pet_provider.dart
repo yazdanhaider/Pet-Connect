@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pawpaw/models/lost_pet_report.dart';
+import 'package:pet_connect/models/lost_pet_report.dart';
 
 class LostPetNotifier extends StateNotifier<List<LostPetReport>> {
   LostPetNotifier() : super([]);

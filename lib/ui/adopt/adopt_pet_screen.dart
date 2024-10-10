@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pawpaw/models/pet.dart';
+import 'package:pet_connect/models/pet.dart';
 
 class AdoptablePet {
   final Pet pet;

@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pawpaw/models/pet.dart';
-import 'package:pawpaw/models/health_record.dart';
+import 'package:pet_connect/models/pet.dart';
+import 'package:pet_connect/models/health_record.dart';
 import 'package:uuid/uuid.dart';
 
 class PetNotifier extends StateNotifier<List<Pet>> {
