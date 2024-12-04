@@ -20,7 +20,7 @@ class PetListScreen extends ConsumerWidget {
         backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: theme.colorScheme.primary),
-          onPressed: () => context.go('/owner-dashboard'),
+          onPressed: () => context.go('/quick-actions'),
         ),
         title: Text(
           'My Pets',

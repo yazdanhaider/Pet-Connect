@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'dart:io' show Platform;
+import 'package:lottie/lottie.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,10 +31,12 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Logo and App Name
+                  // Lottie Animation and App Name
                   Hero(
                     tag: 'app_logo',
                     child: Container(
+                      width: mediaQuery.size.width * 0.5,
+                      height: mediaQuery.size.width * 0.5,
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -46,10 +49,10 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(
-                        isIOS ? Icons.pets : Icons.pets_outlined,
-                        size: mediaQuery.size.width * 0.25,
-                        color: theme.primaryColor,
+                      child: Lottie.asset(
+                        'assets/Animation - 1733352856093.json',
+                        fit: BoxFit.contain,
+                        repeat: true,
                       ),
                     ),
                   ),

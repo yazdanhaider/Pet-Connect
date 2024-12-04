@@ -23,11 +23,24 @@ import 'package:pet_connect/ui/sections/pet_care_screen.dart';
 import 'package:pet_connect/ui/sections/community_screen.dart';
 import 'package:pet_connect/ui/pet_care/pet_care_tips_screen.dart';
 import 'package:pet_connect/ui/emergency/pet_emergency_screen.dart';
+import 'package:pet_connect/ui/caretaker/schedule_screen.dart';
+import 'package:pet_connect/ui/caretaker/client_list_screen.dart';
+import 'package:pet_connect/ui/caretaker/add_appointment_screen.dart';
+import 'package:pet_connect/ui/caretaker/add_client_screen.dart';
+import 'package:pet_connect/ui/caretaker/client_details_screen.dart';
+import 'package:pet_connect/ui/caretaker/service_list_screen.dart';
+import 'package:pet_connect/ui/caretaker/add_service_screen.dart';
+import '../providers/client_provider.dart';
+import 'package:pet_connect/ui/onboarding/onboarding_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
-    initialLocation: '/',
+    initialLocation: '/onboarding',
     routes: [
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingScreen(),
+      ),
       GoRoute(
         path: '/',
         builder: (context, state) => const HomeScreen(),
@@ -39,6 +52,14 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/caretaker-dashboard',
         builder: (context, state) => const CaretakerDashboard(),
+      ),
+      GoRoute(
+        path: '/caretaker-schedule',
+        builder: (context, state) => const ScheduleScreen(),
+      ),
+      GoRoute(
+        path: '/caretaker-clients',
+        builder: (context, state) => const ClientListScreen(),
       ),
       GoRoute(
         path: '/add-pet',
@@ -126,6 +147,35 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/pet-emergency',
         builder: (context, state) => PetEmergencyScreen(),
+      ),
+      GoRoute(
+        path: '/add-appointment',
+        builder: (context, state) => const AddAppointmentScreen(),
+      ),
+      GoRoute(
+        path: '/schedule',
+        builder: (context, state) => const ScheduleScreen(),
+      ),
+      GoRoute(
+        path: '/add-client',
+        builder: (context, state) => const AddClientScreen(),
+      ),
+      GoRoute(
+        path: '/client-details/:id',
+        builder: (context, state) {
+          final clientId = state.pathParameters['id']!;
+          final client =
+              ref.read(clientProvider).firstWhere((c) => c.id == clientId);
+          return ClientDetailsScreen(client: client);
+        },
+      ),
+      GoRoute(
+        path: '/services',
+        builder: (context, state) => const ServiceListScreen(),
+      ),
+      GoRoute(
+        path: '/add-service',
+        builder: (context, state) => const AddServiceScreen(),
       ),
     ],
   );

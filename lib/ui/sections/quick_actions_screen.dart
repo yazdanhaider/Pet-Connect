@@ -19,6 +19,10 @@ class QuickActionsScreen extends StatelessWidget {
             pinned: true,
             backgroundColor: theme.colorScheme.background,
             elevation: 0,
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: theme.colorScheme.primary),
+              onPressed: () => context.go('/owner-dashboard'),
+            ),
             flexibleSpace: FlexibleSpaceBar(
               title: const Text(
                 'Quick Actions',

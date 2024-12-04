@@ -17,8 +17,9 @@ _$HealthRecordImpl _$$HealthRecordImplFromJson(Map<String, dynamic> json) =>
       prescription: json['prescription'] as String?,
       weight: (json['weight'] as num?)?.toDouble(),
       attachments: (json['attachments'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
+              ?.map((e) => e as String)
+              .toList() ??
+          const [],
     );
 
 Map<String, dynamic> _$$HealthRecordImplToJson(_$HealthRecordImpl instance) =>

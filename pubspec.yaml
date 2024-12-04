@@ -36,12 +36,16 @@ dependencies:
   flutter_hooks: ^0.20.5
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
-  uuid: ^4.5.0
+  uuid: ^4.2.1
   fl_chart: ^0.69.0
   intl: ^0.19.0
   carousel_slider: ^5.0.0
   qr_flutter: ^4.1.0
   url_launcher: ^6.2.5
+  image_picker: ^1.1.2
+  smooth_page_indicator: ^1.1.0
+  lottie: ^3.0.0
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +78,13 @@ flutter:
     - assets/images/luna.jpg
     - assets/images/labra.jpg
     - assets/images/retriever.jpeg
+    - assets/images/onboarding1.png
+    - assets/images/onboarding2.png
+    - assets/images/onboarding3.png
+    - assets/Animation - 1733350137600.json
+    - assets/Animation - 1733350548926.json
+    - assets/Animation - 1733350398407.json
+    - assets/Animation - 1733352856093.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -28,7 +28,7 @@ mixin _$HealthRecord {
   String? get notes => throw _privateConstructorUsedError;
   String? get prescription => throw _privateConstructorUsedError;
   double? get weight => throw _privateConstructorUsedError;
-  List<String>? get attachments => throw _privateConstructorUsedError;
+  List<String> get attachments => throw _privateConstructorUsedError;
 
   /// Serializes this HealthRecord to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ abstract class $HealthRecordCopyWith<$Res> {
       String? notes,
       String? prescription,
       double? weight,
-      List<String>? attachments});
+      List<String> attachments});
 }
 
 /// @nodoc
@@ -81,7 +81,7 @@ class _$HealthRecordCopyWithImpl<$Res, $Val extends HealthRecord>
     Object? notes = freezed,
     Object? prescription = freezed,
     Object? weight = freezed,
-    Object? attachments = freezed,
+    Object? attachments = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -116,10 +116,10 @@ class _$HealthRecordCopyWithImpl<$Res, $Val extends HealthRecord>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double?,
-      attachments: freezed == attachments
+      attachments: null == attachments
           ? _value.attachments
           : attachments // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
     ) as $Val);
   }
 }
@@ -141,7 +141,7 @@ abstract class _$$HealthRecordImplCopyWith<$Res>
       String? notes,
       String? prescription,
       double? weight,
-      List<String>? attachments});
+      List<String> attachments});
 }
 
 /// @nodoc
@@ -165,7 +165,7 @@ class __$$HealthRecordImplCopyWithImpl<$Res>
     Object? notes = freezed,
     Object? prescription = freezed,
     Object? weight = freezed,
-    Object? attachments = freezed,
+    Object? attachments = null,
   }) {
     return _then(_$HealthRecordImpl(
       id: null == id
@@ -200,10 +200,10 @@ class __$$HealthRecordImplCopyWithImpl<$Res>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double?,
-      attachments: freezed == attachments
+      attachments: null == attachments
           ? _value._attachments
           : attachments // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
+              as List<String>,
     ));
   }
 }
@@ -220,7 +220,7 @@ class _$HealthRecordImpl implements _HealthRecord {
       this.notes,
       this.prescription,
       this.weight,
-      final List<String>? attachments})
+      final List<String> attachments = const []})
       : _attachments = attachments;
 
   factory _$HealthRecordImpl.fromJson(Map<String, dynamic> json) =>
@@ -242,14 +242,13 @@ class _$HealthRecordImpl implements _HealthRecord {
   final String? prescription;
   @override
   final double? weight;
-  final List<String>? _attachments;
+  final List<String> _attachments;
   @override
-  List<String>? get attachments {
-    final value = _attachments;
-    if (value == null) return null;
+  @JsonKey()
+  List<String> get attachments {
     if (_attachments is EqualUnmodifiableListView) return _attachments;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableListView(_attachments);
   }
 
   @override
@@ -316,7 +315,7 @@ abstract class _HealthRecord implements HealthRecord {
       final String? notes,
       final String? prescription,
       final double? weight,
-      final List<String>? attachments}) = _$HealthRecordImpl;
+      final List<String> attachments}) = _$HealthRecordImpl;
 
   factory _HealthRecord.fromJson(Map<String, dynamic> json) =
       _$HealthRecordImpl.fromJson;
@@ -338,7 +337,7 @@ abstract class _HealthRecord implements HealthRecord {
   @override
   double? get weight;
   @override
-  List<String>? get attachments;
+  List<String> get attachments;
 
   /// Create a copy of HealthRecord
   /// with the given fields replaced by the non-null parameter values.
