@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pawpaw/models/lost_pet_report.dart';
-import 'package:pawpaw/providers/lost_pet_provider.dart';
-import 'package:pawpaw/providers/pet_provider.dart';
+import 'package:pet_connect/models/lost_pet_report.dart';
+import 'package:pet_connect/providers/lost_pet_provider.dart';
+import 'package:pet_connect/providers/pet_provider.dart';
 import 'package:uuid/uuid.dart';
 
 class ReportLostPetScreen extends ConsumerStatefulWidget {

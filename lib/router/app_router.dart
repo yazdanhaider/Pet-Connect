@@ -17,6 +17,9 @@ import 'package:pet_connect/ui/lost_found/lost_pet_list_screen.dart';
 import 'package:pet_connect/ui/forum/forum_list_screen.dart';
 import 'package:pet_connect/ui/forum/forum_post_screen.dart';
 import 'package:pet_connect/ui/forum/create_forum_post_screen.dart';
+import 'package:pet_connect/ui/sections/quick_actions_screen.dart';
+import 'package:pet_connect/ui/sections/pet_care_screen.dart';
+import 'package:pet_connect/ui/sections/community_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -93,6 +96,18 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/create-forum-post',
         builder: (context, state) => const CreateForumPostScreen(),
+      ),
+      GoRoute(
+        path: '/quick-actions',
+        builder: (context, state) => const QuickActionsScreen(),
+      ),
+      GoRoute(
+        path: '/pet-care',
+        builder: (context, state) => const PetCareScreen(),
+      ),
+      GoRoute(
+        path: '/community',
+        builder: (context, state) => const CommunityScreen(),
       ),
     ],
   );
