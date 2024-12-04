@@ -6,20 +6,35 @@ part of 'forum_post.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$CommentImpl _$$CommentImplFromJson(Map<String, dynamic> json) =>
+    _$CommentImpl(
+      id: json['id'] as String,
+      authorName: json['authorName'] as String,
+      content: json['content'] as String,
+      createdAt: DateTime.parse(json['createdAt'] as String),
+      likes: (json['likes'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$CommentImplToJson(_$CommentImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'authorName': instance.authorName,
+      'content': instance.content,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'likes': instance.likes,
+    };
+
 _$ForumPostImpl _$$ForumPostImplFromJson(Map<String, dynamic> json) =>
     _$ForumPostImpl(
       id: json['id'] as String,
       title: json['title'] as String,
       content: json['content'] as String,
-      authorId: json['authorId'] as String,
       authorName: json['authorName'] as String,
+      category: json['category'] as String,
       createdAt: DateTime.parse(json['createdAt'] as String),
-      tags: (json['tags'] as List<dynamic>).map((e) => e as String).toList(),
-      likes:
-          (json['likes'] as List<dynamic>?)?.map((e) => e as String).toList() ??
-              const [],
+      likes: (json['likes'] as num?)?.toInt() ?? 0,
       comments: (json['comments'] as List<dynamic>?)
-              ?.map((e) => ForumComment.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => Comment.fromJson(e as Map<String, dynamic>))
               .toList() ??
           const [],
     );
@@ -29,28 +44,9 @@ Map<String, dynamic> _$$ForumPostImplToJson(_$ForumPostImpl instance) =>
       'id': instance.id,
       'title': instance.title,
       'content': instance.content,
-      'authorId': instance.authorId,
       'authorName': instance.authorName,
+      'category': instance.category,
       'createdAt': instance.createdAt.toIso8601String(),
-      'tags': instance.tags,
       'likes': instance.likes,
       'comments': instance.comments,
-    };
-
-_$ForumCommentImpl _$$ForumCommentImplFromJson(Map<String, dynamic> json) =>
-    _$ForumCommentImpl(
-      id: json['id'] as String,
-      content: json['content'] as String,
-      authorId: json['authorId'] as String,
-      authorName: json['authorName'] as String,
-      createdAt: DateTime.parse(json['createdAt'] as String),
-    );
-
-Map<String, dynamic> _$$ForumCommentImplToJson(_$ForumCommentImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'content': instance.content,
-      'authorId': instance.authorId,
-      'authorName': instance.authorName,
-      'createdAt': instance.createdAt.toIso8601String(),
     };

@@ -111,13 +111,13 @@ class _AddHealthRecordScreenState extends ConsumerState<AddHealthRecordScreen> {
     if (_formKey.currentState!.validate()) {
       final newRecord = HealthRecord(
         id: const Uuid().v4(),
-        petId: widget.petId,
-        date: _selectedDate,
+        title: _typeController.text,
         type: _typeController.text,
-        description: _descriptionController.text,
+        date: _selectedDate,
+        veterinarian: _vetNameController.text,
+        notes: _descriptionController.text,
+        prescription: _medicationController.text,
         weight: double.tryParse(_weightController.text),
-        medication: _medicationController.text,
-        vetName: _vetNameController.text,
       );
 
       ref.read(petProvider.notifier).addHealthRecord(widget.petId, newRecord);

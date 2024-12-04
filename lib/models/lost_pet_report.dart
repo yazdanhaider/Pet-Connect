@@ -7,15 +7,18 @@ part 'lost_pet_report.g.dart';
 class LostPetReport with _$LostPetReport {
   const factory LostPetReport({
     required String id,
-    required String petId,
     required String petName,
     required String petType,
-    String? petBreed,
+    required String breed,
+    required String color,
+    required String size,
+    required String location,
     required DateTime lastSeenDate,
-    required String lastSeenLocation,
     required String contactName,
     required String contactPhone,
-    String? additionalInfo,
+    required String description,
+    required String imageUrl,
+    required bool isFound,
   }) = _LostPetReport;
 
   factory LostPetReport.fromJson(Map<String, dynamic> json) =>

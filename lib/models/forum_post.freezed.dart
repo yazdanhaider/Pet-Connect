@@ -14,6 +14,239 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+Comment _$CommentFromJson(Map<String, dynamic> json) {
+  return _Comment.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Comment {
+  String get id => throw _privateConstructorUsedError;
+  String get authorName => throw _privateConstructorUsedError;
+  String get content => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
+  int get likes => throw _privateConstructorUsedError;
+
+  /// Serializes this Comment to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $CommentCopyWith<Comment> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CommentCopyWith<$Res> {
+  factory $CommentCopyWith(Comment value, $Res Function(Comment) then) =
+      _$CommentCopyWithImpl<$Res, Comment>;
+  @useResult
+  $Res call(
+      {String id,
+      String authorName,
+      String content,
+      DateTime createdAt,
+      int likes});
+}
+
+/// @nodoc
+class _$CommentCopyWithImpl<$Res, $Val extends Comment>
+    implements $CommentCopyWith<$Res> {
+  _$CommentCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? authorName = null,
+    Object? content = null,
+    Object? createdAt = null,
+    Object? likes = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      authorName: null == authorName
+          ? _value.authorName
+          : authorName // ignore: cast_nullable_to_non_nullable
+              as String,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      likes: null == likes
+          ? _value.likes
+          : likes // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CommentImplCopyWith<$Res> implements $CommentCopyWith<$Res> {
+  factory _$$CommentImplCopyWith(
+          _$CommentImpl value, $Res Function(_$CommentImpl) then) =
+      __$$CommentImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      String authorName,
+      String content,
+      DateTime createdAt,
+      int likes});
+}
+
+/// @nodoc
+class __$$CommentImplCopyWithImpl<$Res>
+    extends _$CommentCopyWithImpl<$Res, _$CommentImpl>
+    implements _$$CommentImplCopyWith<$Res> {
+  __$$CommentImplCopyWithImpl(
+      _$CommentImpl _value, $Res Function(_$CommentImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? authorName = null,
+    Object? content = null,
+    Object? createdAt = null,
+    Object? likes = null,
+  }) {
+    return _then(_$CommentImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      authorName: null == authorName
+          ? _value.authorName
+          : authorName // ignore: cast_nullable_to_non_nullable
+              as String,
+      content: null == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      likes: null == likes
+          ? _value.likes
+          : likes // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CommentImpl implements _Comment {
+  const _$CommentImpl(
+      {required this.id,
+      required this.authorName,
+      required this.content,
+      required this.createdAt,
+      this.likes = 0});
+
+  factory _$CommentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentImplFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String authorName;
+  @override
+  final String content;
+  @override
+  final DateTime createdAt;
+  @override
+  @JsonKey()
+  final int likes;
+
+  @override
+  String toString() {
+    return 'Comment(id: $id, authorName: $authorName, content: $content, createdAt: $createdAt, likes: $likes)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CommentImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.authorName, authorName) ||
+                other.authorName == authorName) &&
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.likes, likes) || other.likes == likes));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, authorName, content, createdAt, likes);
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
+      __$$CommentImplCopyWithImpl<_$CommentImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CommentImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Comment implements Comment {
+  const factory _Comment(
+      {required final String id,
+      required final String authorName,
+      required final String content,
+      required final DateTime createdAt,
+      final int likes}) = _$CommentImpl;
+
+  factory _Comment.fromJson(Map<String, dynamic> json) = _$CommentImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  String get authorName;
+  @override
+  String get content;
+  @override
+  DateTime get createdAt;
+  @override
+  int get likes;
+
+  /// Create a copy of Comment
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$CommentImplCopyWith<_$CommentImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 ForumPost _$ForumPostFromJson(Map<String, dynamic> json) {
   return _ForumPost.fromJson(json);
 }
@@ -23,12 +256,11 @@ mixin _$ForumPost {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
-  String get authorId => throw _privateConstructorUsedError;
   String get authorName => throw _privateConstructorUsedError;
+  String get category => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
-  List<String> get tags => throw _privateConstructorUsedError;
-  List<String> get likes => throw _privateConstructorUsedError;
-  List<ForumComment> get comments => throw _privateConstructorUsedError;
+  int get likes => throw _privateConstructorUsedError;
+  List<Comment> get comments => throw _privateConstructorUsedError;
 
   /// Serializes this ForumPost to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,12 +281,11 @@ abstract class $ForumPostCopyWith<$Res> {
       {String id,
       String title,
       String content,
-      String authorId,
       String authorName,
+      String category,
       DateTime createdAt,
-      List<String> tags,
-      List<String> likes,
-      List<ForumComment> comments});
+      int likes,
+      List<Comment> comments});
 }
 
 /// @nodoc
@@ -75,10 +306,9 @@ class _$ForumPostCopyWithImpl<$Res, $Val extends ForumPost>
     Object? id = null,
     Object? title = null,
     Object? content = null,
-    Object? authorId = null,
     Object? authorName = null,
+    Object? category = null,
     Object? createdAt = null,
-    Object? tags = null,
     Object? likes = null,
     Object? comments = null,
   }) {
@@ -95,30 +325,26 @@ class _$ForumPostCopyWithImpl<$Res, $Val extends ForumPost>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      authorId: null == authorId
-          ? _value.authorId
-          : authorId // ignore: cast_nullable_to_non_nullable
-              as String,
       authorName: null == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
               as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tags: null == tags
-          ? _value.tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       likes: null == likes
           ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as int,
       comments: null == comments
           ? _value.comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as List<ForumComment>,
+              as List<Comment>,
     ) as $Val);
   }
 }
@@ -135,12 +361,11 @@ abstract class _$$ForumPostImplCopyWith<$Res>
       {String id,
       String title,
       String content,
-      String authorId,
       String authorName,
+      String category,
       DateTime createdAt,
-      List<String> tags,
-      List<String> likes,
-      List<ForumComment> comments});
+      int likes,
+      List<Comment> comments});
 }
 
 /// @nodoc
@@ -159,10 +384,9 @@ class __$$ForumPostImplCopyWithImpl<$Res>
     Object? id = null,
     Object? title = null,
     Object? content = null,
-    Object? authorId = null,
     Object? authorName = null,
+    Object? category = null,
     Object? createdAt = null,
-    Object? tags = null,
     Object? likes = null,
     Object? comments = null,
   }) {
@@ -179,30 +403,26 @@ class __$$ForumPostImplCopyWithImpl<$Res>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      authorId: null == authorId
-          ? _value.authorId
-          : authorId // ignore: cast_nullable_to_non_nullable
-              as String,
       authorName: null == authorName
           ? _value.authorName
           : authorName // ignore: cast_nullable_to_non_nullable
+              as String,
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
               as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      tags: null == tags
-          ? _value._tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<String>,
       likes: null == likes
-          ? _value._likes
+          ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as int,
       comments: null == comments
           ? _value._comments
           : comments // ignore: cast_nullable_to_non_nullable
-              as List<ForumComment>,
+              as List<Comment>,
     ));
   }
 }
@@ -214,15 +434,12 @@ class _$ForumPostImpl implements _ForumPost {
       {required this.id,
       required this.title,
       required this.content,
-      required this.authorId,
       required this.authorName,
+      required this.category,
       required this.createdAt,
-      required final List<String> tags,
-      final List<String> likes = const [],
-      final List<ForumComment> comments = const []})
-      : _tags = tags,
-        _likes = likes,
-        _comments = comments;
+      this.likes = 0,
+      final List<Comment> comments = const []})
+      : _comments = comments;
 
   factory _$ForumPostImpl.fromJson(Map<String, dynamic> json) =>
       _$$ForumPostImplFromJson(json);
@@ -234,32 +451,18 @@ class _$ForumPostImpl implements _ForumPost {
   @override
   final String content;
   @override
-  final String authorId;
-  @override
   final String authorName;
   @override
+  final String category;
+  @override
   final DateTime createdAt;
-  final List<String> _tags;
-  @override
-  List<String> get tags {
-    if (_tags is EqualUnmodifiableListView) return _tags;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_tags);
-  }
-
-  final List<String> _likes;
   @override
   @JsonKey()
-  List<String> get likes {
-    if (_likes is EqualUnmodifiableListView) return _likes;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_likes);
-  }
-
-  final List<ForumComment> _comments;
+  final int likes;
+  final List<Comment> _comments;
   @override
   @JsonKey()
-  List<ForumComment> get comments {
+  List<Comment> get comments {
     if (_comments is EqualUnmodifiableListView) return _comments;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_comments);
@@ -267,7 +470,7 @@ class _$ForumPostImpl implements _ForumPost {
 
   @override
   String toString() {
-    return 'ForumPost(id: $id, title: $title, content: $content, authorId: $authorId, authorName: $authorName, createdAt: $createdAt, tags: $tags, likes: $likes, comments: $comments)';
+    return 'ForumPost(id: $id, title: $title, content: $content, authorName: $authorName, category: $category, createdAt: $createdAt, likes: $likes, comments: $comments)';
   }
 
   @override
@@ -278,14 +481,13 @@ class _$ForumPostImpl implements _ForumPost {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.content, content) || other.content == content) &&
-            (identical(other.authorId, authorId) ||
-                other.authorId == authorId) &&
             (identical(other.authorName, authorName) ||
                 other.authorName == authorName) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
-            const DeepCollectionEquality().equals(other._tags, _tags) &&
-            const DeepCollectionEquality().equals(other._likes, _likes) &&
+            (identical(other.likes, likes) || other.likes == likes) &&
             const DeepCollectionEquality().equals(other._comments, _comments));
   }
 
@@ -296,11 +498,10 @@ class _$ForumPostImpl implements _ForumPost {
       id,
       title,
       content,
-      authorId,
       authorName,
+      category,
       createdAt,
-      const DeepCollectionEquality().hash(_tags),
-      const DeepCollectionEquality().hash(_likes),
+      likes,
       const DeepCollectionEquality().hash(_comments));
 
   /// Create a copy of ForumPost
@@ -324,12 +525,11 @@ abstract class _ForumPost implements ForumPost {
       {required final String id,
       required final String title,
       required final String content,
-      required final String authorId,
       required final String authorName,
+      required final String category,
       required final DateTime createdAt,
-      required final List<String> tags,
-      final List<String> likes,
-      final List<ForumComment> comments}) = _$ForumPostImpl;
+      final int likes,
+      final List<Comment> comments}) = _$ForumPostImpl;
 
   factory _ForumPost.fromJson(Map<String, dynamic> json) =
       _$ForumPostImpl.fromJson;
@@ -341,259 +541,20 @@ abstract class _ForumPost implements ForumPost {
   @override
   String get content;
   @override
-  String get authorId;
-  @override
   String get authorName;
+  @override
+  String get category;
   @override
   DateTime get createdAt;
   @override
-  List<String> get tags;
+  int get likes;
   @override
-  List<String> get likes;
-  @override
-  List<ForumComment> get comments;
+  List<Comment> get comments;
 
   /// Create a copy of ForumPost
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ForumPostImplCopyWith<_$ForumPostImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-ForumComment _$ForumCommentFromJson(Map<String, dynamic> json) {
-  return _ForumComment.fromJson(json);
-}
-
-/// @nodoc
-mixin _$ForumComment {
-  String get id => throw _privateConstructorUsedError;
-  String get content => throw _privateConstructorUsedError;
-  String get authorId => throw _privateConstructorUsedError;
-  String get authorName => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-
-  /// Serializes this ForumComment to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ForumComment
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ForumCommentCopyWith<ForumComment> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ForumCommentCopyWith<$Res> {
-  factory $ForumCommentCopyWith(
-          ForumComment value, $Res Function(ForumComment) then) =
-      _$ForumCommentCopyWithImpl<$Res, ForumComment>;
-  @useResult
-  $Res call(
-      {String id,
-      String content,
-      String authorId,
-      String authorName,
-      DateTime createdAt});
-}
-
-/// @nodoc
-class _$ForumCommentCopyWithImpl<$Res, $Val extends ForumComment>
-    implements $ForumCommentCopyWith<$Res> {
-  _$ForumCommentCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of ForumComment
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? content = null,
-    Object? authorId = null,
-    Object? authorName = null,
-    Object? createdAt = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorId: null == authorId
-          ? _value.authorId
-          : authorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorName: null == authorName
-          ? _value.authorName
-          : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$ForumCommentImplCopyWith<$Res>
-    implements $ForumCommentCopyWith<$Res> {
-  factory _$$ForumCommentImplCopyWith(
-          _$ForumCommentImpl value, $Res Function(_$ForumCommentImpl) then) =
-      __$$ForumCommentImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String content,
-      String authorId,
-      String authorName,
-      DateTime createdAt});
-}
-
-/// @nodoc
-class __$$ForumCommentImplCopyWithImpl<$Res>
-    extends _$ForumCommentCopyWithImpl<$Res, _$ForumCommentImpl>
-    implements _$$ForumCommentImplCopyWith<$Res> {
-  __$$ForumCommentImplCopyWithImpl(
-      _$ForumCommentImpl _value, $Res Function(_$ForumCommentImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ForumComment
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? content = null,
-    Object? authorId = null,
-    Object? authorName = null,
-    Object? createdAt = null,
-  }) {
-    return _then(_$ForumCommentImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorId: null == authorId
-          ? _value.authorId
-          : authorId // ignore: cast_nullable_to_non_nullable
-              as String,
-      authorName: null == authorName
-          ? _value.authorName
-          : authorName // ignore: cast_nullable_to_non_nullable
-              as String,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$ForumCommentImpl implements _ForumComment {
-  const _$ForumCommentImpl(
-      {required this.id,
-      required this.content,
-      required this.authorId,
-      required this.authorName,
-      required this.createdAt});
-
-  factory _$ForumCommentImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ForumCommentImplFromJson(json);
-
-  @override
-  final String id;
-  @override
-  final String content;
-  @override
-  final String authorId;
-  @override
-  final String authorName;
-  @override
-  final DateTime createdAt;
-
-  @override
-  String toString() {
-    return 'ForumComment(id: $id, content: $content, authorId: $authorId, authorName: $authorName, createdAt: $createdAt)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ForumCommentImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.authorId, authorId) ||
-                other.authorId == authorId) &&
-            (identical(other.authorName, authorName) ||
-                other.authorName == authorName) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, content, authorId, authorName, createdAt);
-
-  /// Create a copy of ForumComment
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ForumCommentImplCopyWith<_$ForumCommentImpl> get copyWith =>
-      __$$ForumCommentImplCopyWithImpl<_$ForumCommentImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ForumCommentImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _ForumComment implements ForumComment {
-  const factory _ForumComment(
-      {required final String id,
-      required final String content,
-      required final String authorId,
-      required final String authorName,
-      required final DateTime createdAt}) = _$ForumCommentImpl;
-
-  factory _ForumComment.fromJson(Map<String, dynamic> json) =
-      _$ForumCommentImpl.fromJson;
-
-  @override
-  String get id;
-  @override
-  String get content;
-  @override
-  String get authorId;
-  @override
-  String get authorName;
-  @override
-  DateTime get createdAt;
-
-  /// Create a copy of ForumComment
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ForumCommentImplCopyWith<_$ForumCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

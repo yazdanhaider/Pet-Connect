@@ -21,15 +21,18 @@ LostPetReport _$LostPetReportFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LostPetReport {
   String get id => throw _privateConstructorUsedError;
-  String get petId => throw _privateConstructorUsedError;
   String get petName => throw _privateConstructorUsedError;
   String get petType => throw _privateConstructorUsedError;
-  String? get petBreed => throw _privateConstructorUsedError;
+  String get breed => throw _privateConstructorUsedError;
+  String get color => throw _privateConstructorUsedError;
+  String get size => throw _privateConstructorUsedError;
+  String get location => throw _privateConstructorUsedError;
   DateTime get lastSeenDate => throw _privateConstructorUsedError;
-  String get lastSeenLocation => throw _privateConstructorUsedError;
   String get contactName => throw _privateConstructorUsedError;
   String get contactPhone => throw _privateConstructorUsedError;
-  String? get additionalInfo => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
+  bool get isFound => throw _privateConstructorUsedError;
 
   /// Serializes this LostPetReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,15 +52,18 @@ abstract class $LostPetReportCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      String petId,
       String petName,
       String petType,
-      String? petBreed,
+      String breed,
+      String color,
+      String size,
+      String location,
       DateTime lastSeenDate,
-      String lastSeenLocation,
       String contactName,
       String contactPhone,
-      String? additionalInfo});
+      String description,
+      String imageUrl,
+      bool isFound});
 }
 
 /// @nodoc
@@ -76,24 +82,23 @@ class _$LostPetReportCopyWithImpl<$Res, $Val extends LostPetReport>
   @override
   $Res call({
     Object? id = null,
-    Object? petId = null,
     Object? petName = null,
     Object? petType = null,
-    Object? petBreed = freezed,
+    Object? breed = null,
+    Object? color = null,
+    Object? size = null,
+    Object? location = null,
     Object? lastSeenDate = null,
-    Object? lastSeenLocation = null,
     Object? contactName = null,
     Object? contactPhone = null,
-    Object? additionalInfo = freezed,
+    Object? description = null,
+    Object? imageUrl = null,
+    Object? isFound = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      petId: null == petId
-          ? _value.petId
-          : petId // ignore: cast_nullable_to_non_nullable
               as String,
       petName: null == petName
           ? _value.petName
@@ -103,18 +108,26 @@ class _$LostPetReportCopyWithImpl<$Res, $Val extends LostPetReport>
           ? _value.petType
           : petType // ignore: cast_nullable_to_non_nullable
               as String,
-      petBreed: freezed == petBreed
-          ? _value.petBreed
-          : petBreed // ignore: cast_nullable_to_non_nullable
-              as String?,
+      breed: null == breed
+          ? _value.breed
+          : breed // ignore: cast_nullable_to_non_nullable
+              as String,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String,
       lastSeenDate: null == lastSeenDate
           ? _value.lastSeenDate
           : lastSeenDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastSeenLocation: null == lastSeenLocation
-          ? _value.lastSeenLocation
-          : lastSeenLocation // ignore: cast_nullable_to_non_nullable
-              as String,
       contactName: null == contactName
           ? _value.contactName
           : contactName // ignore: cast_nullable_to_non_nullable
@@ -123,10 +136,18 @@ class _$LostPetReportCopyWithImpl<$Res, $Val extends LostPetReport>
           ? _value.contactPhone
           : contactPhone // ignore: cast_nullable_to_non_nullable
               as String,
-      additionalInfo: freezed == additionalInfo
-          ? _value.additionalInfo
-          : additionalInfo // ignore: cast_nullable_to_non_nullable
-              as String?,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      isFound: null == isFound
+          ? _value.isFound
+          : isFound // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -141,15 +162,18 @@ abstract class _$$LostPetReportImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      String petId,
       String petName,
       String petType,
-      String? petBreed,
+      String breed,
+      String color,
+      String size,
+      String location,
       DateTime lastSeenDate,
-      String lastSeenLocation,
       String contactName,
       String contactPhone,
-      String? additionalInfo});
+      String description,
+      String imageUrl,
+      bool isFound});
 }
 
 /// @nodoc
@@ -166,24 +190,23 @@ class __$$LostPetReportImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? petId = null,
     Object? petName = null,
     Object? petType = null,
-    Object? petBreed = freezed,
+    Object? breed = null,
+    Object? color = null,
+    Object? size = null,
+    Object? location = null,
     Object? lastSeenDate = null,
-    Object? lastSeenLocation = null,
     Object? contactName = null,
     Object? contactPhone = null,
-    Object? additionalInfo = freezed,
+    Object? description = null,
+    Object? imageUrl = null,
+    Object? isFound = null,
   }) {
     return _then(_$LostPetReportImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      petId: null == petId
-          ? _value.petId
-          : petId // ignore: cast_nullable_to_non_nullable
               as String,
       petName: null == petName
           ? _value.petName
@@ -193,18 +216,26 @@ class __$$LostPetReportImplCopyWithImpl<$Res>
           ? _value.petType
           : petType // ignore: cast_nullable_to_non_nullable
               as String,
-      petBreed: freezed == petBreed
-          ? _value.petBreed
-          : petBreed // ignore: cast_nullable_to_non_nullable
-              as String?,
+      breed: null == breed
+          ? _value.breed
+          : breed // ignore: cast_nullable_to_non_nullable
+              as String,
+      color: null == color
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      size: null == size
+          ? _value.size
+          : size // ignore: cast_nullable_to_non_nullable
+              as String,
+      location: null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as String,
       lastSeenDate: null == lastSeenDate
           ? _value.lastSeenDate
           : lastSeenDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastSeenLocation: null == lastSeenLocation
-          ? _value.lastSeenLocation
-          : lastSeenLocation // ignore: cast_nullable_to_non_nullable
-              as String,
       contactName: null == contactName
           ? _value.contactName
           : contactName // ignore: cast_nullable_to_non_nullable
@@ -213,10 +244,18 @@ class __$$LostPetReportImplCopyWithImpl<$Res>
           ? _value.contactPhone
           : contactPhone // ignore: cast_nullable_to_non_nullable
               as String,
-      additionalInfo: freezed == additionalInfo
-          ? _value.additionalInfo
-          : additionalInfo // ignore: cast_nullable_to_non_nullable
-              as String?,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      isFound: null == isFound
+          ? _value.isFound
+          : isFound // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -226,15 +265,18 @@ class __$$LostPetReportImplCopyWithImpl<$Res>
 class _$LostPetReportImpl implements _LostPetReport {
   const _$LostPetReportImpl(
       {required this.id,
-      required this.petId,
       required this.petName,
       required this.petType,
-      this.petBreed,
+      required this.breed,
+      required this.color,
+      required this.size,
+      required this.location,
       required this.lastSeenDate,
-      required this.lastSeenLocation,
       required this.contactName,
       required this.contactPhone,
-      this.additionalInfo});
+      required this.description,
+      required this.imageUrl,
+      required this.isFound});
 
   factory _$LostPetReportImpl.fromJson(Map<String, dynamic> json) =>
       _$$LostPetReportImplFromJson(json);
@@ -242,27 +284,33 @@ class _$LostPetReportImpl implements _LostPetReport {
   @override
   final String id;
   @override
-  final String petId;
-  @override
   final String petName;
   @override
   final String petType;
   @override
-  final String? petBreed;
+  final String breed;
+  @override
+  final String color;
+  @override
+  final String size;
+  @override
+  final String location;
   @override
   final DateTime lastSeenDate;
-  @override
-  final String lastSeenLocation;
   @override
   final String contactName;
   @override
   final String contactPhone;
   @override
-  final String? additionalInfo;
+  final String description;
+  @override
+  final String imageUrl;
+  @override
+  final bool isFound;
 
   @override
   String toString() {
-    return 'LostPetReport(id: $id, petId: $petId, petName: $petName, petType: $petType, petBreed: $petBreed, lastSeenDate: $lastSeenDate, lastSeenLocation: $lastSeenLocation, contactName: $contactName, contactPhone: $contactPhone, additionalInfo: $additionalInfo)';
+    return 'LostPetReport(id: $id, petName: $petName, petType: $petType, breed: $breed, color: $color, size: $size, location: $location, lastSeenDate: $lastSeenDate, contactName: $contactName, contactPhone: $contactPhone, description: $description, imageUrl: $imageUrl, isFound: $isFound)';
   }
 
   @override
@@ -271,21 +319,24 @@ class _$LostPetReportImpl implements _LostPetReport {
         (other.runtimeType == runtimeType &&
             other is _$LostPetReportImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.petId, petId) || other.petId == petId) &&
             (identical(other.petName, petName) || other.petName == petName) &&
             (identical(other.petType, petType) || other.petType == petType) &&
-            (identical(other.petBreed, petBreed) ||
-                other.petBreed == petBreed) &&
+            (identical(other.breed, breed) || other.breed == breed) &&
+            (identical(other.color, color) || other.color == color) &&
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
             (identical(other.lastSeenDate, lastSeenDate) ||
                 other.lastSeenDate == lastSeenDate) &&
-            (identical(other.lastSeenLocation, lastSeenLocation) ||
-                other.lastSeenLocation == lastSeenLocation) &&
             (identical(other.contactName, contactName) ||
                 other.contactName == contactName) &&
             (identical(other.contactPhone, contactPhone) ||
                 other.contactPhone == contactPhone) &&
-            (identical(other.additionalInfo, additionalInfo) ||
-                other.additionalInfo == additionalInfo));
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.isFound, isFound) || other.isFound == isFound));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -293,15 +344,18 @@ class _$LostPetReportImpl implements _LostPetReport {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      petId,
       petName,
       petType,
-      petBreed,
+      breed,
+      color,
+      size,
+      location,
       lastSeenDate,
-      lastSeenLocation,
       contactName,
       contactPhone,
-      additionalInfo);
+      description,
+      imageUrl,
+      isFound);
 
   /// Create a copy of LostPetReport
   /// with the given fields replaced by the non-null parameter values.
@@ -322,15 +376,18 @@ class _$LostPetReportImpl implements _LostPetReport {
 abstract class _LostPetReport implements LostPetReport {
   const factory _LostPetReport(
       {required final String id,
-      required final String petId,
       required final String petName,
       required final String petType,
-      final String? petBreed,
+      required final String breed,
+      required final String color,
+      required final String size,
+      required final String location,
       required final DateTime lastSeenDate,
-      required final String lastSeenLocation,
       required final String contactName,
       required final String contactPhone,
-      final String? additionalInfo}) = _$LostPetReportImpl;
+      required final String description,
+      required final String imageUrl,
+      required final bool isFound}) = _$LostPetReportImpl;
 
   factory _LostPetReport.fromJson(Map<String, dynamic> json) =
       _$LostPetReportImpl.fromJson;
@@ -338,23 +395,29 @@ abstract class _LostPetReport implements LostPetReport {
   @override
   String get id;
   @override
-  String get petId;
-  @override
   String get petName;
   @override
   String get petType;
   @override
-  String? get petBreed;
+  String get breed;
+  @override
+  String get color;
+  @override
+  String get size;
+  @override
+  String get location;
   @override
   DateTime get lastSeenDate;
-  @override
-  String get lastSeenLocation;
   @override
   String get contactName;
   @override
   String get contactPhone;
   @override
-  String? get additionalInfo;
+  String get description;
+  @override
+  String get imageUrl;
+  @override
+  bool get isFound;
 
   /// Create a copy of LostPetReport
   /// with the given fields replaced by the non-null parameter values.

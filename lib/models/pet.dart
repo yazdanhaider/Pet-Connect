@@ -10,8 +10,14 @@ class Pet with _$Pet {
     required String id,
     required String name,
     required String type,
-    String? breed,
-    DateTime? birthDate,
+    required String breed,
+    required String gender,
+    required DateTime dateOfBirth,
+    required double weight,
+    required bool isVaccinated,
+    String? imageUrl,
+    String? microchipNumber,
+    String? description,
     @Default([]) List<HealthRecord> healthRecords,
   }) = _Pet;
 

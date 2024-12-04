@@ -23,8 +23,14 @@ mixin _$Pet {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
-  String? get breed => throw _privateConstructorUsedError;
-  DateTime? get birthDate => throw _privateConstructorUsedError;
+  String get breed => throw _privateConstructorUsedError;
+  String get gender => throw _privateConstructorUsedError;
+  DateTime get dateOfBirth => throw _privateConstructorUsedError;
+  double get weight => throw _privateConstructorUsedError;
+  bool get isVaccinated => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
+  String? get microchipNumber => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   List<HealthRecord> get healthRecords => throw _privateConstructorUsedError;
 
   /// Serializes this Pet to a JSON map.
@@ -45,8 +51,14 @@ abstract class $PetCopyWith<$Res> {
       {String id,
       String name,
       String type,
-      String? breed,
-      DateTime? birthDate,
+      String breed,
+      String gender,
+      DateTime dateOfBirth,
+      double weight,
+      bool isVaccinated,
+      String? imageUrl,
+      String? microchipNumber,
+      String? description,
       List<HealthRecord> healthRecords});
 }
 
@@ -67,8 +79,14 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
     Object? id = null,
     Object? name = null,
     Object? type = null,
-    Object? breed = freezed,
-    Object? birthDate = freezed,
+    Object? breed = null,
+    Object? gender = null,
+    Object? dateOfBirth = null,
+    Object? weight = null,
+    Object? isVaccinated = null,
+    Object? imageUrl = freezed,
+    Object? microchipNumber = freezed,
+    Object? description = freezed,
     Object? healthRecords = null,
   }) {
     return _then(_value.copyWith(
@@ -84,14 +102,38 @@ class _$PetCopyWithImpl<$Res, $Val extends Pet> implements $PetCopyWith<$Res> {
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      breed: freezed == breed
+      breed: null == breed
           ? _value.breed
           : breed // ignore: cast_nullable_to_non_nullable
+              as String,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as String,
+      dateOfBirth: null == dateOfBirth
+          ? _value.dateOfBirth
+          : dateOfBirth // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      weight: null == weight
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double,
+      isVaccinated: null == isVaccinated
+          ? _value.isVaccinated
+          : isVaccinated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      birthDate: freezed == birthDate
-          ? _value.birthDate
-          : birthDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      microchipNumber: freezed == microchipNumber
+          ? _value.microchipNumber
+          : microchipNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       healthRecords: null == healthRecords
           ? _value.healthRecords
           : healthRecords // ignore: cast_nullable_to_non_nullable
@@ -110,8 +152,14 @@ abstract class _$$PetImplCopyWith<$Res> implements $PetCopyWith<$Res> {
       {String id,
       String name,
       String type,
-      String? breed,
-      DateTime? birthDate,
+      String breed,
+      String gender,
+      DateTime dateOfBirth,
+      double weight,
+      bool isVaccinated,
+      String? imageUrl,
+      String? microchipNumber,
+      String? description,
       List<HealthRecord> healthRecords});
 }
 
@@ -129,8 +177,14 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
     Object? id = null,
     Object? name = null,
     Object? type = null,
-    Object? breed = freezed,
-    Object? birthDate = freezed,
+    Object? breed = null,
+    Object? gender = null,
+    Object? dateOfBirth = null,
+    Object? weight = null,
+    Object? isVaccinated = null,
+    Object? imageUrl = freezed,
+    Object? microchipNumber = freezed,
+    Object? description = freezed,
     Object? healthRecords = null,
   }) {
     return _then(_$PetImpl(
@@ -146,14 +200,38 @@ class __$$PetImplCopyWithImpl<$Res> extends _$PetCopyWithImpl<$Res, _$PetImpl>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      breed: freezed == breed
+      breed: null == breed
           ? _value.breed
           : breed // ignore: cast_nullable_to_non_nullable
+              as String,
+      gender: null == gender
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as String,
+      dateOfBirth: null == dateOfBirth
+          ? _value.dateOfBirth
+          : dateOfBirth // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      weight: null == weight
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as double,
+      isVaccinated: null == isVaccinated
+          ? _value.isVaccinated
+          : isVaccinated // ignore: cast_nullable_to_non_nullable
+              as bool,
+      imageUrl: freezed == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      birthDate: freezed == birthDate
-          ? _value.birthDate
-          : birthDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+      microchipNumber: freezed == microchipNumber
+          ? _value.microchipNumber
+          : microchipNumber // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       healthRecords: null == healthRecords
           ? _value._healthRecords
           : healthRecords // ignore: cast_nullable_to_non_nullable
@@ -169,8 +247,14 @@ class _$PetImpl implements _Pet {
       {required this.id,
       required this.name,
       required this.type,
-      this.breed,
-      this.birthDate,
+      required this.breed,
+      required this.gender,
+      required this.dateOfBirth,
+      required this.weight,
+      required this.isVaccinated,
+      this.imageUrl,
+      this.microchipNumber,
+      this.description,
       final List<HealthRecord> healthRecords = const []})
       : _healthRecords = healthRecords;
 
@@ -184,9 +268,21 @@ class _$PetImpl implements _Pet {
   @override
   final String type;
   @override
-  final String? breed;
+  final String breed;
   @override
-  final DateTime? birthDate;
+  final String gender;
+  @override
+  final DateTime dateOfBirth;
+  @override
+  final double weight;
+  @override
+  final bool isVaccinated;
+  @override
+  final String? imageUrl;
+  @override
+  final String? microchipNumber;
+  @override
+  final String? description;
   final List<HealthRecord> _healthRecords;
   @override
   @JsonKey()
@@ -198,7 +294,7 @@ class _$PetImpl implements _Pet {
 
   @override
   String toString() {
-    return 'Pet(id: $id, name: $name, type: $type, breed: $breed, birthDate: $birthDate, healthRecords: $healthRecords)';
+    return 'Pet(id: $id, name: $name, type: $type, breed: $breed, gender: $gender, dateOfBirth: $dateOfBirth, weight: $weight, isVaccinated: $isVaccinated, imageUrl: $imageUrl, microchipNumber: $microchipNumber, description: $description, healthRecords: $healthRecords)';
   }
 
   @override
@@ -210,15 +306,37 @@ class _$PetImpl implements _Pet {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.breed, breed) || other.breed == breed) &&
-            (identical(other.birthDate, birthDate) ||
-                other.birthDate == birthDate) &&
+            (identical(other.gender, gender) || other.gender == gender) &&
+            (identical(other.dateOfBirth, dateOfBirth) ||
+                other.dateOfBirth == dateOfBirth) &&
+            (identical(other.weight, weight) || other.weight == weight) &&
+            (identical(other.isVaccinated, isVaccinated) ||
+                other.isVaccinated == isVaccinated) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.microchipNumber, microchipNumber) ||
+                other.microchipNumber == microchipNumber) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             const DeepCollectionEquality()
                 .equals(other._healthRecords, _healthRecords));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, type, breed, birthDate,
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      name,
+      type,
+      breed,
+      gender,
+      dateOfBirth,
+      weight,
+      isVaccinated,
+      imageUrl,
+      microchipNumber,
+      description,
       const DeepCollectionEquality().hash(_healthRecords));
 
   /// Create a copy of Pet
@@ -242,8 +360,14 @@ abstract class _Pet implements Pet {
       {required final String id,
       required final String name,
       required final String type,
-      final String? breed,
-      final DateTime? birthDate,
+      required final String breed,
+      required final String gender,
+      required final DateTime dateOfBirth,
+      required final double weight,
+      required final bool isVaccinated,
+      final String? imageUrl,
+      final String? microchipNumber,
+      final String? description,
       final List<HealthRecord> healthRecords}) = _$PetImpl;
 
   factory _Pet.fromJson(Map<String, dynamic> json) = _$PetImpl.fromJson;
@@ -255,9 +379,21 @@ abstract class _Pet implements Pet {
   @override
   String get type;
   @override
-  String? get breed;
+  String get breed;
   @override
-  DateTime? get birthDate;
+  String get gender;
+  @override
+  DateTime get dateOfBirth;
+  @override
+  double get weight;
+  @override
+  bool get isVaccinated;
+  @override
+  String? get imageUrl;
+  @override
+  String? get microchipNumber;
+  @override
+  String? get description;
   @override
   List<HealthRecord> get healthRecords;
 

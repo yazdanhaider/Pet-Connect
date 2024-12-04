@@ -8,6 +8,7 @@ import 'package:pet_connect/ui/pet/add_pet_screen.dart';
 import 'package:pet_connect/ui/pet/pet_list_screen.dart';
 import 'package:pet_connect/ui/pet/pet_health_screen.dart';
 import 'package:pet_connect/ui/pet/add_health_record_screen.dart';
+import 'package:pet_connect/ui/pet/health_record_detail_screen.dart';
 import 'package:pet_connect/ui/mate/find_mate_screen.dart';
 import 'package:pet_connect/ui/vet/find_vet_screen.dart';
 import 'package:pet_connect/ui/adopt/adopt_pet_screen.dart';
@@ -20,6 +21,8 @@ import 'package:pet_connect/ui/forum/create_forum_post_screen.dart';
 import 'package:pet_connect/ui/sections/quick_actions_screen.dart';
 import 'package:pet_connect/ui/sections/pet_care_screen.dart';
 import 'package:pet_connect/ui/sections/community_screen.dart';
+import 'package:pet_connect/ui/pet_care/pet_care_tips_screen.dart';
+import 'package:pet_connect/ui/emergency/pet_emergency_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   return GoRouter(
@@ -107,7 +110,22 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: '/community',
-        builder: (context, state) => const CommunityScreen(),
+        builder: (context, state) => CommunityScreen(),
+      ),
+      GoRoute(
+        path: '/health-record/:petId/:recordId',
+        builder: (context, state) => HealthRecordDetailScreen(
+          petId: state.pathParameters['petId']!,
+          recordId: state.pathParameters['recordId']!,
+        ),
+      ),
+      GoRoute(
+        path: '/pet-care-tips',
+        builder: (context, state) => PetCareTipsScreen(),
+      ),
+      GoRoute(
+        path: '/pet-emergency',
+        builder: (context, state) => PetEmergencyScreen(),
       ),
     ],
   );

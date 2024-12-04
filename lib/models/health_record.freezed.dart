@@ -21,13 +21,14 @@ HealthRecord _$HealthRecordFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$HealthRecord {
   String get id => throw _privateConstructorUsedError;
-  String get petId => throw _privateConstructorUsedError;
-  DateTime get date => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
+  String get veterinarian => throw _privateConstructorUsedError;
+  String? get notes => throw _privateConstructorUsedError;
+  String? get prescription => throw _privateConstructorUsedError;
   double? get weight => throw _privateConstructorUsedError;
-  String? get medication => throw _privateConstructorUsedError;
-  String? get vetName => throw _privateConstructorUsedError;
+  List<String>? get attachments => throw _privateConstructorUsedError;
 
   /// Serializes this HealthRecord to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,13 +48,14 @@ abstract class $HealthRecordCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      String petId,
-      DateTime date,
+      String title,
       String type,
-      String? description,
+      DateTime date,
+      String veterinarian,
+      String? notes,
+      String? prescription,
       double? weight,
-      String? medication,
-      String? vetName});
+      List<String>? attachments});
 }
 
 /// @nodoc
@@ -72,47 +74,52 @@ class _$HealthRecordCopyWithImpl<$Res, $Val extends HealthRecord>
   @override
   $Res call({
     Object? id = null,
-    Object? petId = null,
-    Object? date = null,
+    Object? title = null,
     Object? type = null,
-    Object? description = freezed,
+    Object? date = null,
+    Object? veterinarian = null,
+    Object? notes = freezed,
+    Object? prescription = freezed,
     Object? weight = freezed,
-    Object? medication = freezed,
-    Object? vetName = freezed,
+    Object? attachments = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      petId: null == petId
-          ? _value.petId
-          : petId // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      veterinarian: null == veterinarian
+          ? _value.veterinarian
+          : veterinarian // ignore: cast_nullable_to_non_nullable
               as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      notes: freezed == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prescription: freezed == prescription
+          ? _value.prescription
+          : prescription // ignore: cast_nullable_to_non_nullable
               as String?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double?,
-      medication: freezed == medication
-          ? _value.medication
-          : medication // ignore: cast_nullable_to_non_nullable
-              as String?,
-      vetName: freezed == vetName
-          ? _value.vetName
-          : vetName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      attachments: freezed == attachments
+          ? _value.attachments
+          : attachments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -127,13 +134,14 @@ abstract class _$$HealthRecordImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      String petId,
-      DateTime date,
+      String title,
       String type,
-      String? description,
+      DateTime date,
+      String veterinarian,
+      String? notes,
+      String? prescription,
       double? weight,
-      String? medication,
-      String? vetName});
+      List<String>? attachments});
 }
 
 /// @nodoc
@@ -150,47 +158,52 @@ class __$$HealthRecordImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? petId = null,
-    Object? date = null,
+    Object? title = null,
     Object? type = null,
-    Object? description = freezed,
+    Object? date = null,
+    Object? veterinarian = null,
+    Object? notes = freezed,
+    Object? prescription = freezed,
     Object? weight = freezed,
-    Object? medication = freezed,
-    Object? vetName = freezed,
+    Object? attachments = freezed,
   }) {
     return _then(_$HealthRecordImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      petId: null == petId
-          ? _value.petId
-          : petId // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String,
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      veterinarian: null == veterinarian
+          ? _value.veterinarian
+          : veterinarian // ignore: cast_nullable_to_non_nullable
               as String,
-      description: freezed == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
+      notes: freezed == notes
+          ? _value.notes
+          : notes // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prescription: freezed == prescription
+          ? _value.prescription
+          : prescription // ignore: cast_nullable_to_non_nullable
               as String?,
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as double?,
-      medication: freezed == medication
-          ? _value.medication
-          : medication // ignore: cast_nullable_to_non_nullable
-              as String?,
-      vetName: freezed == vetName
-          ? _value.vetName
-          : vetName // ignore: cast_nullable_to_non_nullable
-              as String?,
+      attachments: freezed == attachments
+          ? _value._attachments
+          : attachments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -200,13 +213,15 @@ class __$$HealthRecordImplCopyWithImpl<$Res>
 class _$HealthRecordImpl implements _HealthRecord {
   const _$HealthRecordImpl(
       {required this.id,
-      required this.petId,
-      required this.date,
+      required this.title,
       required this.type,
-      this.description,
+      required this.date,
+      required this.veterinarian,
+      this.notes,
+      this.prescription,
       this.weight,
-      this.medication,
-      this.vetName});
+      final List<String>? attachments})
+      : _attachments = attachments;
 
   factory _$HealthRecordImpl.fromJson(Map<String, dynamic> json) =>
       _$$HealthRecordImplFromJson(json);
@@ -214,23 +229,32 @@ class _$HealthRecordImpl implements _HealthRecord {
   @override
   final String id;
   @override
-  final String petId;
-  @override
-  final DateTime date;
+  final String title;
   @override
   final String type;
   @override
-  final String? description;
+  final DateTime date;
+  @override
+  final String veterinarian;
+  @override
+  final String? notes;
+  @override
+  final String? prescription;
   @override
   final double? weight;
+  final List<String>? _attachments;
   @override
-  final String? medication;
-  @override
-  final String? vetName;
+  List<String>? get attachments {
+    final value = _attachments;
+    if (value == null) return null;
+    if (_attachments is EqualUnmodifiableListView) return _attachments;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'HealthRecord(id: $id, petId: $petId, date: $date, type: $type, description: $description, weight: $weight, medication: $medication, vetName: $vetName)';
+    return 'HealthRecord(id: $id, title: $title, type: $type, date: $date, veterinarian: $veterinarian, notes: $notes, prescription: $prescription, weight: $weight, attachments: $attachments)';
   }
 
   @override
@@ -239,21 +263,32 @@ class _$HealthRecordImpl implements _HealthRecord {
         (other.runtimeType == runtimeType &&
             other is _$HealthRecordImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.petId, petId) || other.petId == petId) &&
-            (identical(other.date, date) || other.date == date) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.veterinarian, veterinarian) ||
+                other.veterinarian == veterinarian) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
+            (identical(other.prescription, prescription) ||
+                other.prescription == prescription) &&
             (identical(other.weight, weight) || other.weight == weight) &&
-            (identical(other.medication, medication) ||
-                other.medication == medication) &&
-            (identical(other.vetName, vetName) || other.vetName == vetName));
+            const DeepCollectionEquality()
+                .equals(other._attachments, _attachments));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, petId, date, type,
-      description, weight, medication, vetName);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      type,
+      date,
+      veterinarian,
+      notes,
+      prescription,
+      weight,
+      const DeepCollectionEquality().hash(_attachments));
 
   /// Create a copy of HealthRecord
   /// with the given fields replaced by the non-null parameter values.
@@ -274,13 +309,14 @@ class _$HealthRecordImpl implements _HealthRecord {
 abstract class _HealthRecord implements HealthRecord {
   const factory _HealthRecord(
       {required final String id,
-      required final String petId,
-      required final DateTime date,
+      required final String title,
       required final String type,
-      final String? description,
+      required final DateTime date,
+      required final String veterinarian,
+      final String? notes,
+      final String? prescription,
       final double? weight,
-      final String? medication,
-      final String? vetName}) = _$HealthRecordImpl;
+      final List<String>? attachments}) = _$HealthRecordImpl;
 
   factory _HealthRecord.fromJson(Map<String, dynamic> json) =
       _$HealthRecordImpl.fromJson;
@@ -288,19 +324,21 @@ abstract class _HealthRecord implements HealthRecord {
   @override
   String get id;
   @override
-  String get petId;
-  @override
-  DateTime get date;
+  String get title;
   @override
   String get type;
   @override
-  String? get description;
+  DateTime get date;
+  @override
+  String get veterinarian;
+  @override
+  String? get notes;
+  @override
+  String? get prescription;
   @override
   double? get weight;
   @override
-  String? get medication;
-  @override
-  String? get vetName;
+  List<String>? get attachments;
 
   /// Create a copy of HealthRecord
   /// with the given fields replaced by the non-null parameter values.

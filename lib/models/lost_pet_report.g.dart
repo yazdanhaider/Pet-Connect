@@ -9,27 +9,33 @@ part of 'lost_pet_report.dart';
 _$LostPetReportImpl _$$LostPetReportImplFromJson(Map<String, dynamic> json) =>
     _$LostPetReportImpl(
       id: json['id'] as String,
-      petId: json['petId'] as String,
       petName: json['petName'] as String,
       petType: json['petType'] as String,
-      petBreed: json['petBreed'] as String?,
+      breed: json['breed'] as String,
+      color: json['color'] as String,
+      size: json['size'] as String,
+      location: json['location'] as String,
       lastSeenDate: DateTime.parse(json['lastSeenDate'] as String),
-      lastSeenLocation: json['lastSeenLocation'] as String,
       contactName: json['contactName'] as String,
       contactPhone: json['contactPhone'] as String,
-      additionalInfo: json['additionalInfo'] as String?,
+      description: json['description'] as String,
+      imageUrl: json['imageUrl'] as String,
+      isFound: json['isFound'] as bool,
     );
 
 Map<String, dynamic> _$$LostPetReportImplToJson(_$LostPetReportImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'petId': instance.petId,
       'petName': instance.petName,
       'petType': instance.petType,
-      'petBreed': instance.petBreed,
+      'breed': instance.breed,
+      'color': instance.color,
+      'size': instance.size,
+      'location': instance.location,
       'lastSeenDate': instance.lastSeenDate.toIso8601String(),
-      'lastSeenLocation': instance.lastSeenLocation,
       'contactName': instance.contactName,
       'contactPhone': instance.contactPhone,
-      'additionalInfo': instance.additionalInfo,
+      'description': instance.description,
+      'imageUrl': instance.imageUrl,
+      'isFound': instance.isFound,
     };

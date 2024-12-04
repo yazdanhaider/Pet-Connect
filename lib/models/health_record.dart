@@ -7,13 +7,14 @@ part 'health_record.g.dart';
 class HealthRecord with _$HealthRecord {
   const factory HealthRecord({
     required String id,
-    required String petId,
-    required DateTime date,
+    required String title,
     required String type,
-    String? description,
+    required DateTime date,
+    required String veterinarian,
+    String? notes,
+    String? prescription,
     double? weight,
-    String? medication,
-    String? vetName,
+    @Default([]) List<String> attachments,
   }) = _HealthRecord;
 
   factory HealthRecord.fromJson(Map<String, dynamic> json) =>
